@@ -1,0 +1,5 @@
+
+
+exports.getIndex = function (res) {
+
+}
