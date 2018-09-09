@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var str = '{"id":1,"name":"laoshan"}';
+
+    var strobj = JSON.parse(str);  //JSON.parse() 坑：必须外面单引号，里面双引号
+
+//    var strobj = eval('('+str+')');      //eval 字符串->对象
+    alert(strobj.id);
+
+</script>
+</body>
+</html>
