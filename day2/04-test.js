@@ -1,7 +1,7 @@
 //exports方式把对象公布给外部
 //只能采用这种引用赋值的方式
 exports.answer = function () {
-    console.log('');
+    console.log('I am answering other questions');
 }
 
 
@@ -12,7 +12,15 @@ exports.answer = function () {
 //对象直接赋值给exports，地址改变，不再指向module.exports
 //require是与module.exports关联的
 exports = {
-
+    'answer':function () {
+        console.log('I am answering other questions');
+    },
+    'think':function (callback) {
+        console.log('thinking~~~');
+        setTimeout(function () {
+            callback();
+        },5000)
+    }
 }
 
 
@@ -22,6 +30,12 @@ exports = {
 module.exports = {
     'answer':function () {
         console.log('I am anwsering other questions.')
+    },
+    'think':function (callback) {
+        console.log('thinking~~~');
+        setTimeout(function () {
+            callback();
+        },5000)
     }
 }
 */

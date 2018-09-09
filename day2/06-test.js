@@ -9,7 +9,7 @@ function fetchPage(url){
     var start = new Date();
     http.get({'host': url},function (res) {
         console.log('got response from ' + url);
-        console.log('request took: ' + new Date() - start);
+        console.log('request took: ' + (new Date() - start)+'ms');
     })
 }
 

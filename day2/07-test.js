@@ -12,8 +12,8 @@ http.createServer(function(req,res){
 
     //把数据打成数据包发回
     res.writeHead(200, {'Content-type':'text/html'});
-    res.end(data)
-}).listen(3000);
+        res.end(data)
+    }).listen(3000);
 
 console.log('server start');
 
