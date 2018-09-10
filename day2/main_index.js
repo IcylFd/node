@@ -1,4 +1,5 @@
 var fs = require('fs');
+var url = require('url');
 
 
 exports.goIndex = function (res,req) {

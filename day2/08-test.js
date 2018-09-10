@@ -50,7 +50,8 @@ console.log('server start');
 
 //拆分
 http.createServer(function (res,req) {
-    var pathname = url.parse(req.url).pathname;
+     var pathname = '/';
+    console.log(req);
     router.router(res,req,pathname);
 }).listen(3000);
 

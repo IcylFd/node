@@ -1,5 +1,5 @@
-var MainIndex = require('main_index');
-var ParseDNS = require('parse_dns');
+var MainIndex = require('./main_index');
+var ParseDNS = require('./parse_dns');
 
 exports.router = function (res,req,pathname) {
     switch(pathname){
