@@ -3,8 +3,11 @@ var url = require('url');
 var fs = require('fs');
 var dns = require('dns');
 var querystring = require('querystring');
-// var router = require('./require');
+var router = require('./router');
 
+
+//将路由写在一个文件中
+/*
 http.createServer(function(req, res){
     var pathname = url.parse(req.url).pathname;
     switch(pathname){
@@ -34,13 +37,21 @@ function goDns(req,res) {
             res.writeHead(404,{'Content-type':'text/plain'});
             res.end('not found');
         }else{
-            for(var i = 0; i < addresses.length; i++){
-                res.writeHead(200,{'Content-type':'text/plain'});
-                res.end(addresses[i]);
-            }
+            res.writeHead(200,{'Content-type':'text/html'});
+            res.end(querystring.stringify(addresses));
 
         }
     })
 }
+
+console.log('server start');
+*/
+
+
+//拆分
+http.createServer(function (res,req) {
+    var pathname = url.parse(req.url).pathname;
+    router.router(res,req,pathname);
+}).listen(3000);
 
 console.log('server start');
